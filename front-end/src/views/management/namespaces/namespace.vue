@@ -1217,17 +1217,9 @@ export default {
           this.inputValue = ''
           return
         }
-        grantPermissions(this.tenantNamespace, inputValue, this.roleMap[inputValue]).then(response => {
-          this.$notify({
-            title: 'success',
-            message: this.$i18n.t('namespace.notification.addRoleSuccess'),
-            type: 'success',
-            duration: 3000
-          })
-          this.dynamicTags.push(inputValue)
-          this.roleMap[inputValue] = []
-          this.roleMapOptions[inputValue] = this.roleOptions
-        })
+        this.dynamicTags.push(inputValue)
+        this.roleMap[inputValue] = []
+        this.roleMapOptions[inputValue] = this.roleOptions
       }
       this.inputVisible = false
       this.inputValue = ''
