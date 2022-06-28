@@ -184,7 +184,7 @@
           </el-tooltip>
         </h4>
         <hr class="split-line">
-        <el-form>
+        <el-form @submit.native.prevent>
           <el-tag
             v-for="tag in dynamicTags"
             :label="tag"
@@ -260,7 +260,7 @@
         </el-select>
         <h4>{{ $t('namespace.policy.storage') }}</h4>
         <hr class="split-line">
-        <el-form :inline="true" :model="form" :rules="rules">
+        <el-form :inline="true" :model="form" :rules="rules" @submit.native.prevent>
           <el-form-item prop="markDeleteMaxRate">
             <span>{{ $t('namespace.policy.markDeleteRate') }}</span>
             <el-tooltip :content="markDeleteRateContent" class="item" effect="dark" placement="top">
@@ -308,7 +308,7 @@
         </el-form>
         <h4>{{ $t('namespace.policy.backlog') }}</h4>
         <hr class="split-line">
-        <el-form :inline="true" :model="form" :rules="rules">
+        <el-form :inline="true" :model="form" :rules="rules" @submit.native.prevent>
           <el-form-item prop="backlogQuotasLimit">
             <span>{{ $t('namespace.policy.backlogQuotasLimit') }}</span>
             <el-tooltip :content="backlogQuotasLimitContent" class="item" effect="dark" placement="top">
@@ -415,7 +415,7 @@
               @keyup.enter.native="handleMessageTTL"/>
           </el-form-item>
         </el-form>
-        <el-form :inline="true" :model="form" :rules="rules">
+        <el-form :inline="true" :model="form" :rules="rules" @submit.native.prevent>
           <el-form-item prop="retentionSize">
             <span>{{ $t('namespace.policy.retentionSize') }}</span>
             <el-tooltip :content="retentionSizeContent" class="item" effect="dark" placement="top">
@@ -428,7 +428,7 @@
               name="retentionSize"
               @keyup.enter.native="handleRetention"/>
           </el-form-item>
-          <el-form-item prop="retentionTime">
+          <el-form-item prop="retentionTime" @submit.native.prevent>
             <span>{{ $t('namespace.policy.retentionTime') }}</span>
             <el-tooltip :content="retentionTimeContent" class="item" effect="dark" placement="top">
               <i class="el-icon-info"/>
@@ -441,7 +441,7 @@
               @keyup.enter.native="handleRetention"/>
           </el-form-item>
         </el-form>
-        <el-form :inline="true" :model="form" :rules="rules">
+        <el-form :inline="true" :model="form" :rules="rules" @submit.native.prevent>
           <el-form-item prop="compactionThreshold">
             <span>{{ $t('namespace.policy.compactionThreshold') }}</span>
             <el-tooltip :content="compactionThresholdContent" class="item" effect="dark" placement="top">
@@ -455,7 +455,7 @@
               @keyup.enter.native="handleCompactionThreshold"/>
           </el-form-item>
         </el-form>
-        <el-form :inline="true" :model="form" :rules="rules">
+        <el-form :inline="true" :model="form" :rules="rules" @submit.native.prevent>
           <el-form-item prop="offloadThreshold">
             <span>{{ $t('namespace.policy.offloadThreshold') }}</span>
             <el-tooltip :content="offloadThresholdContent" class="item" effect="dark" placement="top">
@@ -483,7 +483,7 @@
         </el-form>
         <h4>{{ $t('namespace.policy.throttling') }}</h4>
         <hr class="split-line">
-        <el-form :inline="true" :model="form" :rules="rules">
+        <el-form :inline="true" :model="form" :rules="rules" @submit.native.prevent>
           <el-form-item prop="maxProducersPerTopic">
             <span>{{ $t('namespace.policy.maxProducersPerTopic') }}</span>
             <el-tooltip :content="maxProducersPerTopicContent" class="item" effect="dark" placement="top">
@@ -529,7 +529,7 @@
         <el-tooltip :content="dispatchRatePerTopicContent" class="item" effect="dark" placement="top">
           <i class="el-icon-info"/>
         </el-tooltip>
-        <el-form :inline="true" :model="form" :rules="rules">
+        <el-form :inline="true" :model="form" :rules="rules" @submit.native.prevent>
           <el-form-item prop="dispatchRatePerTopicBytes">
             <span>{{ $t('namespace.policy.dispatchRatePerTopicBytes') }}</span>
             <md-input
