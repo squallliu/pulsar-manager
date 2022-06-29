@@ -137,7 +137,7 @@ export const asyncRouterMap = [
           noCache: true,
           roles: ['super']
         },
-        hidden: true
+        hidden: false
       },
       {
         path: 'clusters/:cluster/cluster',
@@ -296,7 +296,7 @@ export const asyncRouterMap = [
           noCache: true,
           roles: ['super']
         },
-        hidden: true
+        hidden: false
       },
       {
         path: 'sources',
@@ -307,7 +307,7 @@ export const asyncRouterMap = [
           noCache: true,
           roles: ['super']
         },
-        hidden: true
+        hidden: false
       },
       {
         path: 'sinks',
@@ -318,7 +318,7 @@ export const asyncRouterMap = [
           noCache: true,
           roles: ['super']
         },
-        hidden: true
+        hidden: false
       },
       {
         path: 'bookies',
@@ -329,7 +329,7 @@ export const asyncRouterMap = [
           noCache: true,
           roles: ['super']
         },
-        hidden: true
+        hidden: false
       },
       {
         path: '/users',
@@ -340,7 +340,7 @@ export const asyncRouterMap = [
           noCache: true,
           roles: ['super']
         },
-        hidden: true
+        hidden: false
       },
       {
         path: '/tokens',
